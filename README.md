@@ -2,7 +2,7 @@ PHP-MySQL Project - Carrello della Spesa con Gestione Ruoli
 
 Autori
 ------
-- Simone Rossato - [GitHub Repository](https://github.com/username1/nome.cognome.PHP-MySQL)
+- Simone Rossato - [GitHub Repository](https://github.com/rossimo00/simone.rossato.PHP-MySQL.git)
 
 Descrizione del Progetto
 ------------------------
