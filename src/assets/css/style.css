@@ -1,0 +1,471 @@
+/* Applica il font 'math' globalmente */
+* {
+  font-family: math, Arial, sans-serif !important;
+}
+
+main{
+  height: 100vh;
+}
+
+
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #072944;
+  opacity: 0.3;
+  pointer-events: none; /* Rende l'overlay trasparente ai clic */
+}
+
+.image-overlay-container {
+  position: relative;
+  display: inline-block; /* Adatta la dimensione al contenuto */
+}
+
+
+/* Resto del tuo CSS rimane invariato */
+
+/* .register-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #8f7b66;
+  box-shadow: 0px 1px 16px 4px #8f7b66;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  padding: 3rem;
+  border-radius: 10px;
+}
+.register-container h2 {
+  font-weight: bold;
+}
+.btn-custom {
+  background-color: #8f7b66 !important;
+  color: white;
+}
+.alert-custom {
+  background-color: #f8d7da;
+  color: #721c24;
+  text-align: center;
+  padding: 0.75rem 1.25rem;
+}
+.form-control {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #8f7b66;
+}
+.form-control:focus {
+  border-color: #8f7b66;
+  box-shadow: 0 0 0 0.2rem rgba(143, 123, 102, 0.5);
+}
+
+.custom-container {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+} */
+
+.navbar-brand {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0px !important;
+}
+
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.nav-link.active{
+  color: #072944 !important;
+  font-weight: bold !important;
+}
+
+.nav-link:hover {
+  color: #072944 !important;
+}
+
+.login-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 50vh 50vw;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  padding-left: 0px !important;
+  height: 95vh;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Sfondo bianco semi-trasparente */
+  display: flex;
+  flex-direction: row;
+  color: blue;
+  border-radius: 10px;
+}
+
+.carousel-caption {
+  p{
+    font-size: 18px;
+    font-weight: 600;
+  }
+  h5{
+    font-size: 34px;
+  }
+}
+
+.bg-login {
+  height: 160vh;
+  width: 160vw;
+  margin-left: -30vw;
+  margin-top: -30vh;
+  background: linear-gradient(
+    135deg,
+    rgba(27, 75, 119, 0.8),
+    rgba(0, 0, 0, 0.5)
+  ); /* Gradiente con un'ombra più scura */
+  filter: blur(10px); /* Sfocatura più lieve */
+}
+
+.modal-body{
+  padding-bottom: 0px !important;
+}
+
+.link {
+  color: #266faa;
+}
+
+.btn-add{
+  color: #fff;
+  background-color: #072944;
+}
+
+.btn-add:hover {
+  background-color: #072944;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+
+td {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+th {
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+.card {
+  border: none !important;
+  background-color: #8f7b66 !important;
+}
+
+.card-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.form-label {
+  color: #072944;
+  font-family: math;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  background-color: #fff;
+  color: #072944;
+}
+
+.modal-footer {
+  background-color: #fff;
+  color: #072944;
+}
+
+.modal-header {
+  background-color: #fff;
+  color: #072944;
+}
+
+.container {
+  color: #072944;
+}
+
+.link:hover {
+  color: #072944;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.navbar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border: 1px solid #072944;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 8px 1px #072944;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* Quando la freccia è ruotata, l'hover modifica solo il colore di sfondo e non la rotazione */
+.arrow.rotate {
+  transform: rotate(-180deg);
+}
+
+.arrow.rotate:hover {
+  background-color: #f0f0f0; /* Cambia solo il colore, non la trasformazione */
+  transform: rotate(-180deg) scale(1.1); /* Mantieni la rotazione e aggiungi lo scaling */
+}
+
+.btn-custom:hover {
+  color: black !important;
+  font-weight: bold !important;
+}
+
+.custom-button {
+  background-color: #266faa;
+  color: rgb(222, 221, 221);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Contenitore principale con effetto hover */
+.hover-effect-container {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.hover-effect-container:hover {
+  cursor: pointer;
+}
+
+/* Overlay inizialmente nascosto */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease; /* Animazione dello scorrimento */
+}
+
+/* Testo dell'overlay */
+.hover-overlay-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.first-type-hover {
+  background-color: #072944bf;
+  color: #fff;
+  left: -100%; /* Parte da sinistra */
+}
+
+.second-type-hover {
+  background-color: #ffffffc2;
+  color: #072944;
+  right: -100%; /* Parte da destra */
+}
+
+/* Overlay principale */
+.scroll-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Sfondo scuro traslucido */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Sopra tutto */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Testo del messaggio */
+.scroll-message {
+  text-align: center;
+  animation: fadeIn 1.5s ease-out; /* Animazione di comparsa */
+}
+
+.scroll-message p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.scroll-icon {
+  font-size: 2rem;
+  animation: bounce 1.5s infinite; /* Effetto rimbalzo */
+}
+
+/* Rimuovi l'overlay */
+.scroll-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Effetto bounce per la freccia */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Effetto fadeIn per il testo */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bg_container{
+  background-color: rgba(255, 255, 255, 0.801);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+/* Mostra l'overlay al passaggio del mouse */
+.hover-effect-container:hover .first-type-hover {
+  left: 0; /* Scorre dentro da sinistra */
+}
+
+.hover-effect-container:hover .second-type-hover {
+  right: 0; /* Scorre dentro da destra */
+}
+
+/* Immagine con animazione opzionale */
+.hover-effect-container:hover .menu_image {
+  transform: scale(1.05); /* Zoom leggero */
+  transition: transform 0.5s ease;
+}
+
+.hover-effect-container .menu_image {
+  transition: transform 0.5s ease;
+}
+
+option {
+  background-color: #8f7b66;
+  color: #fff;
+}
+
+.menu_image{
+  width: auto;
+  height: 50vh;
+}
+
+option:hover {
+  color: #8f7b66 !important;
+  outline: none;
+  background-color: #fff !important;
+}
+
+.navbar-collapse {
+  display: flex;
+}
+
+.custom-button:hover {
+  background-color: #072944;
+
+  color: white;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  height: 100vh !important;
+  width: 100% !important;
+}
+
+.slide-image {
+  height: 100vh;
+  object-position: center;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.carousel-control-next {
+  width: 4% !important;
+}
+.navbar-logo {
+  height: 8vh;
+  mix-blend-mode: darken;
+}
+
+.carousel-control-prev {
+  width: 4% !important;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  background-color: #072944;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #072944;
+  font-family: math;
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #072944;
+  font-family: math;
+}
+

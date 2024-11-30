@@ -1,6 +1,17 @@
 <?php
-require_once '../includes/connection.php';
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+require_once 'connessione.php';
 
+/**
+ * Retrieves the database connection.
+ *
+ * This function establishes a connection to the database using the configuration
+ * defined in the `connection.php` file.
+ *
+ * @return mysqli The database connection object.
+ */
 $conn = getDBConnection(); // Ottieni la connessione al database
 
 // Creazione della tabella Users
@@ -18,10 +29,12 @@ if ($conn->query($sqlUsers) === TRUE) {
     echo "Errore nella creazione della tabella Users: " . $conn->error . "<br>";
 }
 
-// Creazione delle altre tabelle (Products, Cart, etc.)
+// Creazione della tabella Products con il campo category come ENUM
 $sqlProducts = "CREATE TABLE IF NOT EXISTS Products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
+    image_url VARCHAR(255),
+    category ENUM('primi', 'antipasti', 'secondi', 'dessert') NOT NULL,  -- Modifica del campo category
     description TEXT,
     price DECIMAL(10, 2) NOT NULL
 )";
@@ -48,6 +61,20 @@ if ($conn->query($sqlCart) === TRUE) {
     echo "Tabella Cart creata con successo!<br>";
 } else {
     echo "Errore nella creazione della tabella Cart: " . $conn->error . "<br>";
+}
+
+// Creazione di un utente admin
+$username = 'admin';  // Nome utente dell'admin
+$password = 'admin_password';  // Password dell'admin
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);  // Password hashata
+
+$sqlAdmin = "INSERT INTO Users (username, password, role) VALUES ('$username', '$hashed_password', 'admin')";
+
+// Verifica che l'utente admin venga creato correttamente
+if ($conn->query($sqlAdmin) === TRUE) {
+    echo "Utente admin creato con successo!<br>";
+} else {
+    echo "Errore nella creazione dell'utente admin: " . $conn->error . "<br>";
 }
 
 // Chiudere la connessione al database
