@@ -46,11 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body style="overflow: hidden;">
 <div class="container-fluid bg-login" ></div>
 <div class="container-fluid login-container bg-white">
-    <div style="height100%">
-    <img src="../assets/images/login_bg.jpg" alt="" style="width: auto;height: 100%;border-radius: 10px 0px 0px 10px">
-    </div>
-        <div class="col-md-4 p-5 d-flex flex-column align-items-center justify-content-between" style="width:70%">
-            <img src="../assets/images/logo.png" alt="" style="width: 20%;height: 20%;">               
+<div style="height: 100%; width: 35%; position: relative; overflow: hidden; border-radius: 10px 0px 0px 10px;">
+    <img src="../assets/images/login_bg.jpg" alt="" style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0px 0px 10px;
+    ">
+</div>
+        <div class="col-md-4 p-5 d-flex flex-column align-items-center justify-content-between" style="width:65%">
+            <img src="../assets/images/logo.png" alt="" style="width: 200px;height: 20%;">               
                 <p class="title">Accedi al tuo account</p>
 
             <?php if (isset($error_message)): ?>

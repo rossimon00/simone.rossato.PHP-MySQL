@@ -138,9 +138,11 @@ $is_admin = ($_SESSION['role'] === 'admin');
             </div>
         </div>
          <!-- Overlay -->
-    <div class="hover-overlay second-type-hover">
+         <a href="menu.php?category=primi">
+    <div class="hover-overlay second-type-hover" >
         <div class="hover-overlay-text">Scopri i nostri primi</div>
     </div>
+    </a>
     </div>
 
     <!-- Secondi -->
@@ -154,9 +156,11 @@ $is_admin = ($_SESSION['role'] === 'admin');
                 <p>Scopri le nostre specialità di carne e pesce, preparate con ingredienti freschi e di alta qualità.</p>
             </div>
         </div>
-        <div class="hover-overlay first-type-hover">
+        <a href="menu.php?category=secondi">
+    <div class="hover-overlay first-type-hover" >
         <div class="hover-overlay-text">Scopri i nostri secondi</div>
     </div>
+    </a>
     </div>
 
 
@@ -172,9 +176,11 @@ $is_admin = ($_SESSION['role'] === 'admin');
             </div>
         </div>
          <!-- Overlay -->
-    <div class="hover-overlay second-type-hover">
+         <a href="menu.php?category=dessert">
+    <div class="hover-overlay second-type-hover" >
         <div class="hover-overlay-text">Scopri i nostri dessert</div>
     </div>
+    </a>
     </div>
     <?php include('footer.php');?>
 </body>

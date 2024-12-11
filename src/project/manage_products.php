@@ -66,8 +66,8 @@ if (isset($_GET['delete_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestione Prodotti</title>
 </head>
-<body style="background:url('../assets/images/black_background_cafe.jpg') no-repeat center center; background-size: cover;padding-top:12vh">
-<div class="container-fluid row">
+<body style="background:url('../assets/images/black_background_cafe.jpg') no-repeat center center; background-size: cover;">
+<div class="container-fluid row" style="padding-top: 2vh;">
     <div class="container">    
         <h2>Gestione Prodotti</h2>
 
