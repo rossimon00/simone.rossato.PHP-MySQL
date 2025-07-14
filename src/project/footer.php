@@ -1,6 +1,6 @@
 
 <!-- Informazioni sul sito -->
-<footer class="bg-dark text-white py-5">
+<footer class="bg-dark text-white py-5 " style="position:relative;bottom:0px;width:100%;height:200px">
     <div class="container text-white">
         <div class="row">
             <div class="col-md-4">
@@ -19,4 +19,14 @@
             </div>
         </div>
     </div>
+    <!-- JS di Flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  // Inizializza il datepicker su un input con id "datepicker"
+  flatpickr("#datepicker", {
+    dateFormat: "d-m-Y",
+    locale: "it" // per localizzare in italiano (se vuoi)
+  });
+</script>
+
 </footer>

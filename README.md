@@ -46,7 +46,7 @@ ristorante-lido-azzurro/
 ├── project/
 │   ├── add_product.php         # Form per aggiungere piatti (manager)
 │   ├── auth.php                # Gestione autenticazione
-│   ├── dashboard.php           # Dashboard personalizzata in base al ruolo
+│   ├── restaurant.php           # restaurant personalizzata in base al ruolo
 │   ├── login.php               # Pagina di login
 │   ├── logout.php              # Script per logout
 │   ├── manage_products.php     # Gestione piatti (manager)
@@ -140,8 +140,8 @@ Il database contiene le seguenti tabelle:
 - Il carrello utilizza sessioni PHP per mantenere i dati durante la navigazione.
 - Gli utenti possono visualizzare i dettagli dell'ordine prima di confermarlo.
 
-#### 3. Dashboard Dinamica
-- La pagina `dashboard.php` visualizza contenuti diversi in base al ruolo dell'utente (es. ordini per gli utenti, gestione per manager/admin).
+#### 3. restaurant Dinamica
+- La pagina `restaurant.php` visualizza contenuti diversi in base al ruolo dell'utente (es. ordini per gli utenti, gestione per manager/admin).
 
 ---
 

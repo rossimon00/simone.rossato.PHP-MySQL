@@ -25,10 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Verifica la password
         if (password_verify($password, $user['password'])) {
             // Se la password è corretta, salva i dati della sessione
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['role'] = $user['role'];
-            // Login riuscito, redirigi a dashboard.php
-            header("Location: dashboard.php");
+            $_SESSION['user'] = $user;
+            // Login riuscito, redirigi a restaurant.php
+            header("Location: restaurant.php");
             exit();
         } else {
             // Se la password è errata
@@ -58,7 +57,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ">
 </div>
         <div class="col-md-4 p-5 d-flex flex-column align-items-center justify-content-between" style="width:65%">
-            <img src="../assets/images/logo.png" alt="" style="width: 200px;height: 20%;">               
+            <img src="../assets/images/logo.png" alt="" style="width: 200px;height: 20%;">      
+            <?php if (isset($_SESSION['success_message'])): ?>
+            <div class="alert alert-success">
+                <?php echo $_SESSION['success_message']; ?>
+            </div>
+            <?php unset($_SESSION['success_message']); ?>
+        <?php elseif (isset($_SESSION['error_message'])): ?>
+            <div class="alert alert-danger">
+                <?php echo $_SESSION['error_message']; ?>
+            </div>
+            <?php unset($_SESSION['error_message']); ?>
+        <?php endif; ?>         
                 <p class="title">Accedi al tuo account</p>
 
             <?php if (isset($error_message)): ?>

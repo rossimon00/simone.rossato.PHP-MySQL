@@ -8,15 +8,14 @@ function login($username, $password) {
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
     if ($user) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['role'] = $user['role'];
+        $_SESSION['user'] = $user;
         return true;
     }
     return false;
 }
 
 function checkRole($role) {
-    return isset($_SESSION['role']) && $_SESSION['role'] === $role;
+    return isset($_SESSION['user']) && $_SESSION['user']['role'] === $role;
 }
 
 function logout() {

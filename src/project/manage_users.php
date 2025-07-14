@@ -4,11 +4,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 include('auth.php');
 include('../db/connessione.php');
-include('../common/header.php');
 include('../common/navbar.php');
 
 // Verifica se l'utente è loggato e ha il ruolo di admin
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+if (!isset($_SESSION['user']) || $_SESSION['user']['role'] !== 'admin') {
     header("Location: login.php");
     exit();
 }
@@ -19,7 +18,7 @@ $conn = getDBConnection();
 // Recupera tutti gli utenti tranne l'admin loggato
 $sql = "SELECT * FROM Users WHERE id != ?";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $_SESSION['user_id']);
+$stmt->bind_param("i", $_SESSION['user']['id']);
 $stmt->execute();
 $result = $stmt->get_result();
 $users = $result->fetch_all(MYSQLI_ASSOC);
